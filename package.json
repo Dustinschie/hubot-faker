@@ -7,10 +7,10 @@
   "keywords": "hubot, hubot-scripts, faker",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-faker.git"
+    "url": "git://github.com/dustinschie/hubot-faker.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-faker/issues"
+    "url": "https://github.com/dustinschie/hubot-faker/issues"
   },
   "dependencies": {},
   "peerDependencies": {
