@@ -14,9 +14,15 @@
 # Author:
 #   Dustin Schie <me@dustinschie.com>
 
-module.exports = (robot) ->
-  robot.respond /hello/, (res) ->
-    res.reply "hello!"
+URL = 'https://fakerapi.herokuapp.com'
 
-  robot.hear /orly/, ->
-    res.send "yarly"
+module.exports = (robot) ->
+  robot.respond /fake (\w+) (\w+)/i, (res) ->
+    path = res.match[1].split(' ').join('/')
+    robot.http("#{URL}/#{path}")
+      .get() (err, resp, body) ->
+        if  resp.statusCode isnt 200
+          res.send "Encountered an error :( #{err}"
+          return
+        else
+          resp.send body
