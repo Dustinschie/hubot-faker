@@ -1,18 +1,18 @@
 # Description
-#   A hubot script that does the things
+#   A hubot script that does the faking of things
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   HUBOT_FAKER_API_URL = Optional. If set, allow you to use your own faker-api instance
 #
 # Commands:
-#   hubot fake [class] [method]- <what the respond trigger does>
+#   hubot fake [class] [method] - please see https://github.com/stympy/faker for class and methods
 #
 # Notes:
 #   <optional notes required for the script>
 #
 # Author:
 #   Dustin Schie <me@dustinschie.com>
-URL = 'https://fakerapi.herokuapp.com'
+URL = process.env.HUBOT_FAKER_API_URL || 'https://fakerapi.herokuapp.com'
 
 module.exports = (robot) ->
   robot.respond /fake( \w+ \w+)$/i, (res) ->
