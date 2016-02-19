@@ -1,7 +1,7 @@
 {
   "name": "hubot-faker",
   "description": "A hubot script that does the things",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Dustin Schie <me@dustinschie.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts, faker",
